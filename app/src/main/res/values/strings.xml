@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ConversionCalculator</string>
+    <string name="enter_amount_m">Enter amount (m):</string>
+    <string name="longitude">Longitude</string>
+    <string name="millimeters_mm">Millimeters (mm)</string>
+    <string name="feet_ft">Feet (ft)</string>
+    <string name="inches_in">Inches (in)</string>
+    <string name="kilometers_km">Kilometers (km)</string>
+    <string name="centimeters_cm">Centimeters (cm)</string>
+    <string name="conversion_result">Conversion Result</string>
+</resources>

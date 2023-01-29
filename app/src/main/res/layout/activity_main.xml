@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/m_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:padding="16dp"
+        android:text="@string/longitude"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/m_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:padding="16dp"
+        android:text="@string/enter_amount_m"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/m_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/m_input"
+        android:layout_width="wrap_content"
+        android:layout_height="51dp"
+        android:layout_marginTop="20dp"
+        android:hint="10"
+        android:padding="8dp"
+        app:layout_constraintLeft_toRightOf="@id/m_text"
+        app:layout_constraintTop_toBottomOf="@id/m_title" />
+
+    <TextView
+        android:id="@+id/m_select_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:padding="18dp"
+        android:text="Choose unit to convert to: "
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/m_text"
+        />
+    <RadioGroup
+        android:id="@+id/longitude_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/option_mm_button"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/m_select_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        >
+        <RadioButton
+            android:id="@+id/option_mm_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/millimeters_mm"
+            />
+
+        <RadioButton
+            android:id="@+id/option_cm_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/centimeters_cm"
+            />
+        <RadioButton
+            android:id="@+id/option_km_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kilometers_km"
+            />
+        <RadioButton
+            android:id="@+id/option_in_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/inches_in"
+            />
+        <RadioButton
+            android:id="@+id/option_ft_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/feet_ft"
+            />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/convert_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Convert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/longitude_options"
+        />
+
+    <TextView
+        android:id="@+id/convert_result_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/conversion_result"
+        app:layout_constraintTop_toBottomOf="@id/convert_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="20dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
